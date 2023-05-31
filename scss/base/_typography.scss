@@ -1,0 +1,17 @@
+body {
+  font-family: $main-font-family;
+  @include fontStyle(1.6rem, 1.62, 100, -0.25px, $secondary-color);
+}
+h1 {
+  @include fontStyle(5.6rem, 1.14, 100, -1px, $secondary-color);
+}
+
+h2 {
+  @include fontStyle(4rem, 1.6, 100, -0.71px, $secondary-color);
+}
+h3 {
+  @include fontStyle(2.4rem, 1.17, 100, -0.43px, $secondary-color);
+}
+h4 {
+  @include fontStyle(1.6rem, 1.25, 100, -0.29px, $secondary-color);
+}

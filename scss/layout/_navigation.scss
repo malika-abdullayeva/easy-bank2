@@ -1,0 +1,49 @@
+.sitenav {
+  margin-right: auto;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 3rem;
+  }
+  &__item {
+    position: relative;
+  }
+  &__link {
+    display: block;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+    @include fontStyle(1.4rem, normal, normal, -0.11px, $main-text-color);
+
+    &:hover {
+      color: $secondary-color;
+    }
+
+    &::before {
+      content: "";
+      background: $backround-liner;
+      height: 4px;
+      width: 100%;
+      position: absolute;
+      display: block;
+      visibility: hidden;
+      opacity: 0;
+      bottom: 0;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover::before {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+  }
+}

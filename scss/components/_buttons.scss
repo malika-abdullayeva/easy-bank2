@@ -1,0 +1,30 @@
+.site-btn {
+  display: inline-block;
+  background: $backround-liner;
+  @include fontStyle(1.4rem, 2, 500, normal, $white-color);
+  border-radius: 22px;
+  padding: {
+    top: 0.8rem;
+    bottom: 0.8rem;
+    left: 3.3rem;
+    right: 3.6rem;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+.header__toggle-btn {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+  @include responsive(tablet) {
+    display: block;
+  }
+}
+.header__toggler-image {
+}

@@ -1,0 +1,242 @@
+/********** MAIN **********/
+.main {
+  flex-grow: 1;
+}
+.hero {
+  padding-top: 17rem;
+  padding-bottom: 17rem;
+  background-image: url("../../img/bacround-img.svg");
+  background-repeat: no-repeat;
+  background-position: 127% 0;
+  background-size: 66vw;
+  position: relative;
+
+  @include responsive(mobile) {
+    background-position: 100% -254px;
+    background-size: 121%;
+  }
+  @include responsive(mobileSm) {
+    background-position: 111% -125px;
+    background-size: 121%;
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 447px;
+    padding-top: 12rem;
+    @include responsive(tabletmd) {
+      max-width: 350px;
+    }
+    @include responsive(mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      transform: translateY(120px);
+    }
+    @include responsive(mobileSm) {
+      transform: translateY(78px);
+    }
+  }
+  &__title {
+    font-weight: 100;
+    margin-bottom: 2.4rem;
+    @include responsive(tabletmd) {
+      font-size: 5rem;
+    }
+    @include responsive(mobile) {
+      margin-top: 12rem;
+      font-size: 4rem;
+    }
+  }
+  &__desc {
+    margin-bottom: 3.6rem;
+    @include responsive(tabletmd) {
+      font-size: 1.5rem;
+    }
+  }
+  &__img {
+    width: 100%;
+    max-width: 70vw;
+    position: absolute;
+    top: -81px;
+    right: -230px;
+    @include responsive(mobile) {
+      max-width: 100vw;
+      top: -280px;
+      right: -1px;
+    }
+  }
+}
+
+/********** SERVICES **********/
+.services {
+  padding-top: 9.6rem;
+  padding-bottom: 9.4rem;
+  background-color: $body-bg;
+
+  &__desc {
+    margin-top: 1.6rem;
+  }
+  &__cards {
+    margin-top: 7.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    gap: 3rem;
+  }
+  &__card {
+    width: 100%;
+    min-width: 255px;
+  }
+  &__card-head {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #33d35e 0%, #2ab6d9 99.58%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__card-body {
+    margin-top: 4rem;
+  }
+  &__title {
+    color: $secondary-color;
+    @include responsive(mobileSm) {
+      font-size: 3.2rem;
+      width: 100%;
+      max-width: 327px;
+    }
+  }
+
+  &__card-desc {
+    margin-top: 2.6rem;
+  }
+}
+
+/**********  ARTICLES **********/
+.articles {
+  background-color: #fafafa;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    align-items: stretch;
+    gap: 3rem;
+  }
+  &__card {
+    width: 100%;
+    max-width: 255px;
+  }
+  &__card-body {
+    padding: 2.4rem;
+    background-color: $white-color;
+    color: $main-text-color;
+  }
+  &__card-text {
+    margin-top: 0.8rem;
+    color: $main-text-color;
+    font-size: 18px;
+  }
+  &__card-title {
+    margin-top: 0.8rem;
+    color: $secondary-color;
+    font-size: 16px;
+  }
+  &__card-subtitle {
+    font-size: 10px;
+  }
+} /**********  FOOTER **********/
+.footer {
+  background-color: $secondary-color;
+  padding: 4.8rem 0;
+  &__container {
+    display: flex;
+    @include responsive(tablet) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+.footer__box {
+  width: 100%;
+  max-width: 220px;
+  margin-right: 13.167rem;
+  @include responsive(tablet) {
+    margin-right: 0;
+    text-align: center;
+  }
+}
+.footer__brand-img {
+  margin: 0 auto;
+}
+.social__list {
+  display: flex;
+  margin-top: 5.53rem;
+  gap: 1.3rem;
+  @include responsive(tablet) {
+    align-items: center;
+    justify-content: center;
+  }
+}
+.social__item {
+}
+.social__link {
+}
+.social__img {
+}
+.footer__list {
+  width: 100%;
+  max-width: 160px;
+  @include responsive(tablet) {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+.footer__link:active {
+  color: #30c88f;
+}
+.footer__list:not(:first-child) {
+  margin-left: 3rem;
+  @include responsive(tablet) {
+    margin-left: 0;
+  }
+}
+.footer__item:not(:first-child) {
+  margin-top: 0.8rem;
+}
+.footer__link {
+  color: $white-color;
+}
+.footer__box2 {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  @include responsive(tablet) {
+    margin-right: auto;
+  }
+}
+.hero__btn {
+}
+.site-btn {
+}
+.footer__btn {
+  align-self: flex-end;
+  @include responsive(tablet) {
+    align-self: center;
+  }
+}
+.footer__text {
+  color: $white-color;
+  opacity: 0.5;
+  margin-top: 2.4rem;
+}
+.footer__logo:active path {
+  fill: #30c88f;
+}
